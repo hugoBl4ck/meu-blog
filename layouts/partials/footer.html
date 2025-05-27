@@ -1,0 +1,13 @@
+<div class="footer center-text">
+    <p class="footer-text">Copyright © {{ now.Format "2006"}} {{ .Site.Title }} | Made with <a href="https://gohugo.io" class="footer-text">Hugo</a></p>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> # <--- JS DO AOS
+    <script type="text/javascript" src="{{ .Site.BaseURL }}js/custom.js"></script> # <--- Seu script customizado
+    <script>
+        // Inicialize o AOS aqui ou no seu custom.js
+        AOS.init({
+            duration: 1000, // duração da animação em ms
+            once: true,    // anima apenas uma vez por elemento
+        });
+    </script>
+</div>

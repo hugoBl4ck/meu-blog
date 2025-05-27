@@ -3,9 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/comunidade/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/desvendando-llms-locais/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/ia/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/intelig%C3%AAncia-artificial/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/llms/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/seguran%C3%A7a/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/seguran%C3%A7a-cibern%C3%A9tica/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tutorial/</loc>
+    <lastmod>2025-05-27T14:00:00-03:00</lastmod>
   </url>
 </urlset>

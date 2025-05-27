@@ -8,6 +8,8 @@
     
     
     <title>Hugo Robot &gt; 404 Page not found</title>
+	<link rel="stylesheet" href="http://localhost:1313/css/custom.css"> # &lt;--- ADICIONE ESTA LINHA para seu CSS customizado
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> # &lt;--- ADICIONE ESTA LINHA para o CSS do AOS
 </head><body><div id="nav-container" class="container">
     <nav id="nav" class="nav justify-content-center">
         
@@ -39,6 +41,16 @@
 
         </div><div class="footer center-text">
     <p class="footer-text">Copyright © 2025 Hugo Robot | Made with <a href="https://gohugo.io" class="footer-text">Hugo</a></p>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> # &lt;--- JS DO AOS
+    <script type="text/javascript" src="http://localhost:1313/js/custom.js"></script> # &lt;--- Seu script customizado
+    <script>
+        
+        AOS.init({
+            duration: 1000, 
+            once: true,    
+        });
+    </script>
 </div><script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 <script>
   feather.replace()
