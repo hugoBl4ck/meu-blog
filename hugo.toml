@@ -1,3 +1,5 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'http://example.org/'
+languageCode = 'pt-br'
+title = 'Meu Blog Técnico'
+theme = 'ananke' # <-- Adicione/edite esta linha para 'ananke'
+defaultContentLanguage = 'pt-br' # <--- Sugestão: Adicione para conteúdo em português
