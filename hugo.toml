@@ -1,5 +1,22 @@
-baseURL = 'http://example.org/'
-languageCode = 'pt-br'
-title = 'Meu Blog Técnico'
-theme = 'ananke' # <-- Adicione/edite esta linha para 'ananke'
-defaultContentLanguage = 'pt-br' # <--- Sugestão: Adicione para conteúdo em português
+baseURL = 'https://warm-tiramisu-f073aa.netlify.app/' # Mantenha a URL do seu Netlify aqui, com a barra no final
+title = 'Hugo Robot' # Coloque o título que você quer para seu blog
+languageCode = 'pt-br' # Altere para pt-br, se quiser que o Hugo entenda que o conteúdo é em português
+theme = 'black'
+
+[params]
+    frontimage = '/images/335c16a191a67d03409ec38a5150b20c.jpg' # <--- Aqui vai o caminho para sua imagem!
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+        [menu.main.params]
+            disabled = false
+
+    [[menu.main]] # Exemplo: Adicionando um item de menu para "Posts"
+        name = "Posts"
+        url = "/posts/" # Aponta para onde seus posts ficarão
+        weight = 2
+        [menu.main.params]
+            disabled = false
