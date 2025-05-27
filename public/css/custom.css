@@ -1,1 +1,76 @@
-.post-content { color: #f8f8f2; }
+/* Reduz o tamanho da fonte para o corpo do texto do post */
+.post-content {
+    font-size: 0.95em; /* 0.95 vezes o tamanho padrão, experimente 0.9em, 0.85em */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    color: #f8f8f2; /* Cor branca suave, como definimos antes */
+}
+
+/* Opcional: Ajustar o tamanho da fonte para os títulos de posts na listagem */
+.post-card h2.post-title {
+    font-size: 1.8em; /* Ajuste se achar os títulos muito grandes */
+}
+
+/* Opcional: Ajustar o tamanho da fonte para os títulos H1, H2, etc. dentro do post */
+.post-content h1 { font-size: 2.2em; }
+.post-content h2 { font-size: 1.8em; 
+		   color: #00bcd4; /* Um ciano vibrante, ajuste para sua cor preferida */
+    		   border-bottom: 2px solid #00bcd4; /* Linha sutil abaixo do H2 */
+    		   padding-bottom: 5px;
+    		   margin-bottom: 20px; 
+}
+.post-content h3 { font-size: 1.5em;
+		   color: #ff9800; /* Um laranja para h3 */
+    		   border-left: 5px solid #ff9800; /* Borda esquerda para h3 */
+    		   padding-left: 10px;
+    		   margin-left: -15px; /* Puxa um pouco para a esquerda, experimente */ 
+}
+.post-content code {
+    background-color: #333; /* Fundo mais claro para o bloco de código */
+    color: #e83e8c; /* Cor de destaque para o texto do código */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Cascadia Code', monospace; /* Fontes de código favoritas */
+    font-size: 0.9em;
+}
+
+/* Estilo para blocos de código grandes (<pre><code>) */
+.post-content pre {
+    background-color: #282c34; /* Fundo escuro como IDEs */
+    color: #abb2bf; /* Cor padrão do texto do código */
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto; /* Garante scroll horizontal para código longo */
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+.post-content pre code { /* Apenas o código dentro do bloco <pre> */
+    background-color: transparent; /* Remove fundo extra */
+    color: inherit; /* Herda a cor do <pre> */
+    padding: 0;
+    border-radius: 0;
+    font-size: 1em; /* Tamanho normal dentro do bloco */
+}
+.post-content blockquote {
+    border-left: 4px solid #2196f3; /* Borda azul */
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #b0c4de; /* Cor do texto da citação */
+    background-color: #2c2c2c; /* Fundo sutil */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.post-content img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 100%; /* Garante responsividade */
+    height: auto;
+    display: block; /* Para margin: auto funcionar se quiser centralizar */
+    margin: 15px auto; /* Centraliza as imagens */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+.post-content img:hover {
+    transform: scale(1.02); /* Leve zoom ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
