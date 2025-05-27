@@ -4,7 +4,7 @@ languageCode = 'pt-br' # Altere para pt-br, se quiser que o Hugo entenda que o c
 theme = 'black'
 
 [params]
-    frontimage = '/images/335c16a191a67d03409ec38a5150b20c.jpg' # <--- Aqui vai o caminho para sua imagem!
+    frontimage = '/images/logo.jpg' # <--- Aqui vai o caminho para sua imagem!
 
 [menu]
     [[menu.main]]
