@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>LLMs on Hugo Robot</title>
     <link>http://localhost:1313/tags/llms/</link>
     <description>Recent content in LLMs on Hugo Robot</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>Hugo Robot</title>
+      <url>http://localhost:1313/images/logo.jpg</url>
+      <link>http://localhost:1313/images/logo.jpg</link>
+    </image>
+    <generator>Hugo -- 0.147.5</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 27 May 2025 14:00:00 -0300</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/llms/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +18,7 @@
       <link>http://localhost:1313/posts/desvendando-llms-locais/</link>
       <pubDate>Tue, 27 May 2025 14:00:00 -0300</pubDate>
       <guid>http://localhost:1313/posts/desvendando-llms-locais/</guid>
-      <description>&lt;h1 id=&#34;desvendando-llms-locais-seu-guia-para-lm-studio-e-modelos-sem-censura&#34;&gt;Desvendando LLMs Locais: Seu Guia para LM Studio e Modelos Sem Censura&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introdução-o-poder-da-ia-na-sua-máquina&#34;&gt;Introdução: O Poder da IA na Sua Máquina&lt;/h2&gt;&#xA;&lt;p&gt;A Inteligência Artificial generativa, especialmente as Large Language Models (LLMs), tem revolucionado a forma como interagimos com a tecnologia. No entanto, muitas das ferramentas mais conhecidas (como ChatGPT, Gemini) operam na nuvem, levantando questões cruciais sobre privacidade, custo e personalização.&lt;/p&gt;&#xA;&lt;p&gt;E se eu te dissesse que você pode ter o poder de uma LLM &lt;strong&gt;diretamente no seu computador&lt;/strong&gt;, com total controle e privacidade? Bem-vindo ao fascinante mundo dos LLMs locais!&lt;/p&gt;</description>
+      <description>Explore o mundo das Large Language Models (LLMs) rodando localmente no seu computador. Descubra como o LM Studio simplifica o uso de modelos de IA poderosos e sem censura para privacidade e personalização, e participe da conversa!</description>
     </item>
   </channel>
 </rss>

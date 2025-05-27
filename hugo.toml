@@ -1,22 +1,58 @@
-baseURL = 'https://warm-tiramisu-f073aa.netlify.app/' # Mantenha a URL do seu Netlify aqui, com a barra no final
-title = 'Hugo Robot' # Coloque o título que você quer para seu blog
-languageCode = 'pt-br' # Altere para pt-br, se quiser que o Hugo entenda que o conteúdo é em português
-theme = 'black'
+baseURL = 'https://warm-tiramisu-f073aa.netlify.app/' # Mantenha a URL do seu Netlify aqui
+title = 'Hugo Robot' # O título principal do seu blog
+languageCode = 'pt-br' # Altere para pt-br
+theme = 'PaperMod' # Nome da pasta do tema
+
+# --- Configurações PaperMod (essenciais e para Home-Info-Mode) ---
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+canonifyURLs = true
 
 [params]
-    frontimage = '/images/logo.jpg' # <--- Aqui vai o caminho para sua imagem!
+    env = "production" # ou "development" para testar localmente
+    description = "Um blog sobre LLMs Locais, Cibersegurança, CVEs e Vulnerabilidades de Aplicações." # Descrição para SEO
+    keywords = ["LLM local", "LM Studio", "IA sem censura", "cibersegurança", "CVEs", "vulnerabilidades", "segurança da informação"]
+    author = "Hugo Robot"
+    images = ["/images/logo.jpg"]    
+    DateFormat = "2 de Janeiro de 2006" # Formato da data
+    defaultTheme = "dark" # "auto" para sistema, "dark" ou "light"
+    disableThemeToggle = false # Permite ao usuário trocar de tema (claro/escuro)
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowWordCount = true
+    ShowRssLink = true
+    DisableComments = false # Controla a exibição de comentários globalmente
+    custom_css = ["css/custom.css"] # Caminho relativo à pasta static
 
-[menu]
+    [params.homeInfoParams]
+        Title = "Olá, eu sou Hugo!" # Título grande na Home Info Mode
+        Content = "Seja bem-vindo ao meu espaço dedicado à **Inteligência Artificial Local**, **Cibersegurança**, **CVEs** e **Vulnerabilidades de Aplicações**. Aqui, desvendamos o mundo da tecnologia para entusiastas e profissionais. Junte-se a mim nessa jornada de aprendizado!" # Conteúdo da Home Info Mode
+
+    [[params.socialIcons]] # Links para suas redes sociais (opcional)
+        name = "github"
+        url = "https://github.com/SeuUsuarioGitHub" # Substitua pelo seu GitHub
+
+    [[params.socialIcons]]
+        name = "linkedin"
+        url = "https://linkedin.com/in/SeuUsuarioLinkedIn" # Substitua pelo seu LinkedIn
+
+    # Configurações do Menu (exemplo)
     [[menu.main]]
-        name = "Home"
-        url = "/"
-        weight = 1
-        [menu.main.params]
-            disabled = false
-
-    [[menu.main]] # Exemplo: Adicionando um item de menu para "Posts"
+        identifier = "posts"
         name = "Posts"
-        url = "/posts/" # Aponta para onde seus posts ficarão
-        weight = 2
-        [menu.main.params]
-            disabled = false
+        url = "/posts/"
+        weight = 10
+
+    [[menu.main]]
+        identifier = "sobre"
+        name = "Sobre Mim"
+        url = "/about/" # Crie esta página depois
+        weight = 20
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"] # Necessário para alguns recursos do tema

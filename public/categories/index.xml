@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Hugo Robot</title>
     <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Hugo Robot</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>Hugo Robot</title>
+      <url>http://localhost:1313/images/logo.jpg</url>
+      <link>http://localhost:1313/images/logo.jpg</link>
+    </image>
+    <generator>Hugo -- 0.147.5</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 27 May 2025 14:00:00 -0300</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
