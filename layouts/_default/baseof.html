@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
+<head>
+    {{- partial "head.html" . }}  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body class=" dark" id="top">
+    {{- partial "header.html" . }}
+
+    <main class="main">
+        {{- block "main" . }}
+        {{- end }}
+    </main>
+
+    {{- partial "footer.html" . }}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>

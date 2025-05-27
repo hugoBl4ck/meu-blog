@@ -39,10 +39,11 @@
 <meta name="twitter:image" content="http://localhost:1313/images/logo.jpg">
 <meta name="twitter:title" content="Tags">
 <meta name="twitter:description" content="Um blog sobre LLMs Locais, Cibersegurança, CVEs e Vulnerabilidades de Aplicações.">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
 </head>
 
-<body class="list dark" id="top">
+<body class=" dark" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -91,7 +92,9 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+
+
+    <main class="main">
 <header class="page-header">
     <h1>Tags</h1>
 </header>
@@ -114,7 +117,6 @@
     </li>
 </ul>
     </main>
-    
 <footer class="footer">
         <span>&copy; 2025 <a href="http://localhost:1313/">Hugo Robot</a></span> · 
 
@@ -184,6 +186,16 @@
     })
 
 </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/custom.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
 </body>
 
 </html>

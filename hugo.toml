@@ -54,5 +54,7 @@ canonifyURLs = true
         url = "/about/" # Crie esta página depois
         weight = 20
 
+[markup.goldmark.renderer]
+  unsafe = true
 [outputs]
     home = ["HTML", "RSS", "JSON"] # Necessário para alguns recursos do tema
