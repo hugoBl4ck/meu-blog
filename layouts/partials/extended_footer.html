@@ -1,10 +1,19 @@
 {{- /* layouts/partials/extend_footer.html */ -}}
 
-{{ $customJSFiles := .Site.Params.custom_js }}
-{{ if not $customJSFiles }}
-    {{ $customJSFiles = slice "js/custom.js" }} {{/* Fallback para o caminho padrão */}}
+{{/* Se precisar do jQuery, carregue-o localmente (recomendado) */}}
+{{/* Salve jquery.min.js em assets/js/jquery.min.js ou static/js/jquery.min.js */}}
+{{ $jquery := resources.Get "js/jquery.min.js" }}
+{{ if $jquery }}
+    {{ if eq hugo.Environment "production" }}
+        {{ $jquery = $jquery | fingerprint | resources.PostProcess }}
+    {{ end }}
+    <script src="{{ $jquery.RelPermalink }}" integrity="{{ $jquery.Data.Integrity }}"></script>
+{{ else }}
+    {{ warnf "jQuery não encontrado em js/jquery.min.js" }}
 {{ end }}
 
+{{/* Seu custom.js */}}
+{{ $customJSFiles := .Site.Params.custom_js | default (slice "js/custom.js") }}
 {{ range $customJSFiles }}
     {{ $js := resources.Get . }}
     {{ if $js }}

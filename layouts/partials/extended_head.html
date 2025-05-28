@@ -1,11 +1,5 @@
 {{- /* layouts/partials/extend_head.html */ -}}
-
-{{/* Verifica se você quer usar os parâmetros do hugo.toml OU força a inclusão direta */}}
-{{ $customCSSFiles := .Site.Params.custom_css }}
-{{ if not $customCSSFiles }}
-    {{ $customCSSFiles = slice "css/custom.css" }} {{/* Fallback para o caminho padrão se o param não for encontrado */}}
-{{ end }}
-
+{{ $customCSSFiles := .Site.Params.custom_css | default (slice "css/custom.css") }}
 {{ range $customCSSFiles }}
     {{ $css := resources.Get . }}
     {{ if $css }}
