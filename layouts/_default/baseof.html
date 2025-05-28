@@ -13,17 +13,8 @@
     {{- with .Author }}<meta name="author" content="{{ . }}"> {{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
 
-    <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com giscus.app;
-        style-src 'self' 'unsafe-inline' unpkg.com;
-        img-src 'self' data: http: https:;
-        connect-src 'self' unpkg.com giscus.app;
-        frame-src 'self' giscus.app;
-        base-uri 'self';
-        form-action 'self';
-        object-src 'none';
-    ">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com giscus.app; style-src 'self' 'unsafe-inline' unpkg.com; img-src 'self' data: http: https:; connect-src 'self' unpkg.com giscus.app; frame-src 'self' giscus.app; base-uri 'self'; form-action 'self'; object-src 'none';">
+
     <link crossorigin="anonymous" href="{{ .Site.BaseURL }}assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 
     <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
@@ -33,6 +24,8 @@
     <link rel="mask-icon" href="{{ .Site.BaseURL }}safari-pinned-tab.svg">
     <meta name="theme-color" content="#2e2e33">
     <meta name="msapplication-TileColor" content="#2e2e33">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom.css">
@@ -46,7 +39,7 @@
         </style>
     </noscript>
 
-    {{- partial "head_extra.html" . }} {{- partial "seo_schema.html" . }} {{- partial "og_twitter.html" . }} 
+    {{- partial "head_extra.html" . }} {{- partial "seo_schema.html" . }} {{- partial "og_twitter.html" . }}
 </head>
 
 <body class=" dark" id="top">
