@@ -36,7 +36,7 @@ canonifyURLs = true # Bom para produção
     ShowWordCount = true
     ShowRssLink = true # PaperMod geralmente lida com isso automaticamente
     custom_css = ["css/custom.css"] # Se você tiver CSS customizado em static/css/custom.css
-    custom_js = ["js/custom.js"] # Se você tiver JS customizado em static/js/custom.js
+    
 
     # Configuração de Comentários (Giscus)
     comments = true # Habilita o framework de comentários do PaperMod (substitui DisableComments)
