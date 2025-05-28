@@ -8,6 +8,6 @@
         {{ end }}
         <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
     {{ else }}
-        {{ warnf "Arquivo custom CSS não encontrado em %s" . }}
+        {{ warnf "ARQUIVO CUSTOM CSS NÃO ENCONTRADO PELA EXTEND_HEAD.HTML em: %s" . }}
     {{ end }}
 {{ end }}
