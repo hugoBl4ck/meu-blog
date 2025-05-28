@@ -1,60 +1,95 @@
-baseURL = 'https://warm-tiramisu-f073aa.netlify.app/' # Mantenha a URL do seu Netlify aqui
-title = 'Hugo Robot' # O título principal do seu blog
-languageCode = 'pt-br' # Altere para pt-br
-theme = 'PaperMod' # Nome da pasta do tema
+baseURL = 'https://warm-tiramisu-f073aa.netlify.app/'
+title = 'Hugo Robot'
+languageCode = 'pt-br'
+# Corrigido para Hugo Modules:
+theme = ["github.com/adityatelange/hugo-PaperMod"] # <--- AJUSTE IMPORTANTE
+
+# Adicionado para Hugo Modules:
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+    disable = false
+  # [[module.imports]] # Você pode adicionar outros módulos aqui no futuro
+  #   path = "outro/modulo"
 
 # --- Configurações PaperMod (essenciais e para Home-Info-Mode) ---
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-canonifyURLs = true
+canonifyURLs = true # Bom para produção
 
 [params]
     env = "production" # ou "development" para testar localmente
-    description = "Um blog sobre LLMs Locais, Cibersegurança, CVEs e Vulnerabilidades de Aplicações." # Descrição para SEO
+    description = "Um blog sobre LLMs Locais, Cibersegurança, CVEs e Vulnerabilidades de Aplicações."
     keywords = ["LLM local", "LM Studio", "IA sem censura", "cibersegurança", "CVEs", "vulnerabilidades", "segurança da informação"]
     author = "Hugo Robot"
-    images = ["images/logo.jpg"]    
-    DateFormat = "2 de Janeiro de 2006" # Formato da data
-    defaultTheme = "dark" # "auto" para sistema, "dark" ou "light"
-    disableThemeToggle = false # Permite ao usuário trocar de tema (claro/escuro)
+    images = ["images/logo.jpg"] # Certifique-se que este caminho existe em static/images/logo.jpg
+    DateFormat = "2 de Janeiro de 2006"
+    defaultTheme = "dark"
+    disableThemeToggle = false
     ShowReadingTime = true
     ShowShareButtons = true
     ShowPostNavLinks = true
     ShowBreadCrumbs = true
     ShowCodeCopyButtons = true
     ShowWordCount = true
-    ShowRssLink = true
-    DisableComments = false # Controla a exibição de comentários globalmente
-    custom_css = ["css/custom.css"] 
+    ShowRssLink = true # PaperMod geralmente lida com isso automaticamente
+    custom_css = ["css/custom.css"] # Se você tiver CSS customizado em static/css/custom.css
+    custom_js = ["js/custom.js"] # Se você tiver JS customizado em static/js/custom.js
+
+    # Configuração de Comentários (Giscus)
+    comments = true # Habilita o framework de comentários do PaperMod (substitui DisableComments)
+    [params.giscus]
+        repo = "hugoBl4ck/meu-blog" # SEU_USUARIO_GITHUB/SEU_REPOSITORIO_GITHUB
+        repoId = "R_kgDOOxI7rw" # Encontre no console do Giscus ou use uma ferramenta para pegar
+        category = "Announcements" # Ou o nome da sua categoria de Discussões no GitHub
+        categoryId = "DIC_kwDOOxI7r84CqpqX" # Encontre no console do Giscus
+        mapping = "url" # ou "url", "title", "og:title"
+        strict = "0"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "top" # ou "bottom"
+        theme = "preferred_color_scheme" # ou "light", "dark", etc.
+        lang = "pt" # Idioma do Giscus
+        loading = "lazy"
+
 
     [params.homeInfoParams]
-        Title = "Olá, eu sou Hugo!" # Título grande na Home Info Mode
-        Content = "Seja bem-vindo ao meu espaço dedicado à **Inteligência Artificial Local**, **Cibersegurança**, **CVEs** e **Vulnerabilidades de Aplicações**. Aqui, desvendamos o mundo da tecnologia para entusiastas e profissionais. Junte-se a mim nessa jornada de aprendizado!" # Conteúdo da Home Info Mode
-
-    [[params.socialIcons]] # Links para suas redes sociais (opcional)
-        name = "github"
-        url = "https://github.com/SeuUsuarioGitHub" # Substitua pelo seu GitHub
+        Title = "Olá, eu sou Hugo!"
+        Content = "Seja bem-vindo ao meu espaço dedicado à **Inteligência Artificial Local**, **Cibersegurança**, **CVEs** e **Vulnerabilidades de Aplicações**. Aqui, desvendamos o mundo da tecnologia para entusiastas e profissionais. Junte-se a mim nessa jornada de aprendizado!"
 
     [[params.socialIcons]]
-        name = "linkedin"
-        url = "https://linkedin.com/in/SeuUsuarioLinkedIn" # Substitua pelo seu LinkedIn
+        name = "github"
+        url = "https://github.com/hugoBl4ck" # Substitua pelo seu GitHub
+    # [[params.socialIcons]]
+    #     name = "linkedin"
+    #     url = "https://linkedin.com/in/SeuUsuarioLinkedIn" # Exemplo
 
-    # Configurações do Menu (exemplo)
-    [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-        weight = 10
-
-    [[menu.main]]
-        identifier = "sobre"
-        name = "Sobre Mim"
-        url = "/about/" # Crie esta página depois
-        weight = 20
+# Configurações do Menu
+[[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+[[menu.main]]
+    identifier = "sobre"
+    name = "Sobre Mim"
+    url = "/about/"
+    weight = 20
+# [[menu.main]]
+# identifier = "categorias"
+# name = "Categorias"
+# url = "/categories/"
+# weight = 30
+# [[menu.main]]
+# identifier = "tags"
+# name = "Tags"
+# url = "/tags/"
+# weight = 40
 
 [markup.goldmark.renderer]
-  unsafe = true
+  unsafe = true # Permite HTML bruto em arquivos markdown. Use com cautela.
+
 [outputs]
-    home = ["HTML", "RSS", "JSON"] # Necessário para alguns recursos do tema
+  home = ["HTML", "RSS", "JSON"] # PaperMod usa JSON para busca e outros recursos

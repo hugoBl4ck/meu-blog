@@ -1,0 +1,10 @@
+# Hugo
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+node_modules/
+
+# Arquivos de cache do Hugo Modules (opcional, mas bom)
+.hugo_cache/
+hugo_stats.json # Se você gerar estatísticas de build
