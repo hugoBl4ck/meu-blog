@@ -1,10 +1,28 @@
-# Hugo
+# Arquivos e pastas gerados pelo Hugo
 public/
 resources/
 .hugo_build.lock
+
+# Ignorar a pasta do tema PaperMod se estiver usando Hugo Modules e ela for um resquício local
+# ou se você estiver gerenciando temas de outra forma e não quiser versioná-los diretamente.
+# Se você estiver usando Git Submodules para o tema, você NÃO deve ignorar esta pasta.
+# Como estamos focando em Hugo Modules, vamos mantê-la ignorada por enquanto.
+themes/PaperMod/
+
+# Arquivos específicos do sistema operacional
 .DS_Store
+
+# Dependências do Node.js (se você usar npm/yarn para algo no projeto)
 node_modules/
 
-# Arquivos de cache do Hugo Modules (opcional, mas bom)
+# Arquivos de cache do Hugo Modules
 .hugo_cache/
-hugo_stats.json # Se você gerar estatísticas de build
+
+# Arquivos de estatísticas do Hugo (geralmente não versionados)
+hugo_stats.json
+
+# Outros arquivos de cache ou logs que possam surgir
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
