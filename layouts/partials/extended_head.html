@@ -1,13 +1,7 @@
-{{- /* layouts/partials/extend_head.html */ -}}
-{{ $customCSSFiles := .Site.Params.custom_css | default (slice "css/custom.css") }}
-{{ range $customCSSFiles }}
-    {{ $css := resources.Get . }}
-    {{ if $css }}
-        {{ if eq hugo.Environment "production" }}
-            {{ $css = $css | fingerprint | resources.PostProcess }}
-        {{ end }}
-        <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-    {{ else }}
-        {{ warnf "ARQUIVO CUSTOM CSS NÃO ENCONTRADO PELA EXTEND_HEAD.HTML em: %s" . }}
-    {{ end }}
-{{ end }}
+{{- /* layouts/partials/extend_head.html - TESTE DE INCLUSÃO */ -}}
+
+<meta name="x-extend-head-test" content="SIM, ESTE ARQUIVO FOI PROCESSADO!">
+<link rel="stylesheet" href="/css/custom.css?v=teste123">
+
+{{/* Mantenha o código do AOS CSS se quiser testá-lo também */}}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
