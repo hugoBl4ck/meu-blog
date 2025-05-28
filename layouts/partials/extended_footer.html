@@ -1,8 +1,18 @@
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script type="text/javascript" src="/js/custom.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true,
-    });
-</script>
+{{- /* layouts/partials/extend_footer.html */ -}}
+
+{{ $customJSFiles := .Site.Params.custom_js }}
+{{ if not $customJSFiles }}
+    {{ $customJSFiles = slice "js/custom.js" }} {{/* Fallback para o caminho padrão */}}
+{{ end }}
+
+{{ range $customJSFiles }}
+    {{ $js := resources.Get . }}
+    {{ if $js }}
+        {{ if eq hugo.Environment "production" }}
+            {{ $js = $js | fingerprint | resources.PostProcess }}
+        {{ end }}
+        <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ else }}
+        {{ warnf "Arquivo custom JS não encontrado em %s" . }}
+    {{ end }}
+{{ end }}
