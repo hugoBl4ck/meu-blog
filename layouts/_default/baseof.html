@@ -2,21 +2,51 @@
 <html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
 
 <head>
-	{{- partial "head.html" . }}
-<meta http-equiv="Content-Security-Policy" content="
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+
+    {{- with .Site.Title }}<title>{{ . }}</title>{{ end }}
+    {{- with .Description }}<meta name="description" content="{{ . }}"> {{ end }}
+    {{- with .Keywords }}<meta name="keywords" content="{{ . }}"> {{ end }}
+    {{- with .Author }}<meta name="author" content="{{ . }}"> {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com giscus.app;
         style-src 'self' 'unsafe-inline' unpkg.com;
-        img-src 'self' data: http: https:; /* Permite imagens de várias fontes */
-        connect-src 'self' unpkg.com giscus.app; /* Permite conexão com Giscus */
-        frame-src 'self' giscus.app; /* Permite o iframe do Giscus */
+        img-src 'self' data: http: https:;
+        connect-src 'self' unpkg.com giscus.app;
+        frame-src 'self' giscus.app;
         base-uri 'self';
         form-action 'self';
         object-src 'none';
     ">
+    <link crossorigin="anonymous" href="{{ .Site.BaseURL }}assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon-32x32.png">
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+    <link rel="mask-icon" href="{{ .Site.BaseURL }}safari-pinned-tab.svg">
+    <meta name="theme-color" content="#2e2e33">
+    <meta name="msapplication-TileColor" content="#2e2e33">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom.css">
+
+    <noscript>
+        <style>
+            #theme-toggle,
+            .top-link {
+                display: none;
+            }
+        </style>
+    </noscript>
+
+    {{- partial "head_extra.html" . }} {{- partial "seo_schema.html" . }} {{- partial "og_twitter.html" . }} 
 </head>
 
 <body class=" dark" id="top">
