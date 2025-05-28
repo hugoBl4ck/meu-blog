@@ -27,7 +27,7 @@ canonifyURLs = true
     ShowWordCount = true
     ShowRssLink = true
     DisableComments = false # Controla a exibição de comentários globalmente
-    custom_css = ["css/custom.css"] # Caminho relativo à pasta static
+    custom_css = ["css/custom.css"] 
 
     [params.homeInfoParams]
         Title = "Olá, eu sou Hugo!" # Título grande na Home Info Mode
